@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
         },
         child: MaterialApp(
             debugShowCheckedModeBanner: false,
-            title: 'product-name',
+            title: '3Asekka Rider',
             theme: ThemeData(),
             home: const LoadingPage()));
   }

@@ -393,7 +393,7 @@ class _LoginState extends State<Login> {
                                   ),
                                   InkWell(
                                     onTap: () {
-                                      openBrowser('terms and conditions url');
+                                      openBrowser('https://3asekka.com/terms');
                                     },
                                     child: Text(
                                       languages[choosenLanguage]['text_terms'],
@@ -410,7 +410,8 @@ class _LoginState extends State<Login> {
                                   ),
                                   InkWell(
                                     onTap: () {
-                                      openBrowser('privacy policy url');
+                                      openBrowser(
+                                          'https://3asekka.com/privacy');
                                     },
                                     child: Text(
                                       languages[choosenLanguage]

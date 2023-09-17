@@ -58,8 +58,8 @@ String ischeckownerordriver = '';
 String transportType = '';
 
 //base url
-String url = 'base-url'; //add '/' at the end of the url as 'https://url.com/'
-String mapkey = 'map-key';
+String url = 'https://3asekka.com/'; //add '/' at the end of the url as 'https://url.com/'
+String mapkey = 'AIzaSyA7yq8ZiUAAqPhtfZAV9h7RXWnpKSmhoPY';
 String mapStyle = '';
 
 getDetailsOfDevice() async {
@@ -4103,7 +4103,7 @@ geolocs.LocationSettings locationSettings = (platform == TargetPlatform.android)
         foregroundNotificationConfig:
             const geolocs.ForegroundNotificationConfig(
           notificationText:
-              "product-name will continue to receive your location in background",
+              "3Asekka Rider will continue to receive your location in background",
           notificationTitle: "Location background service running",
           enableWakeLock: true,
         ))

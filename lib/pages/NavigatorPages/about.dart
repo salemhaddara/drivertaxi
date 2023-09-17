@@ -75,7 +75,7 @@ class _AboutState extends State<About> {
                         //terms and conditions
                         InkWell(
                           onTap: () {
-                            openBrowser('terms and conditions url');
+                            openBrowser('https://3asekka.com/terms');
                           },
                           child: Text(
                             languages[choosenLanguage]
@@ -92,7 +92,7 @@ class _AboutState extends State<About> {
                         //privacy policy
                         InkWell(
                           onTap: () {
-                            openBrowser('privacy policy url');
+                            openBrowser('https://3asekka.com/privacy');
                           },
                           child: Text(
                             languages[choosenLanguage]['text_privacy'],
@@ -108,7 +108,7 @@ class _AboutState extends State<About> {
                         //website
                         InkWell(
                           onTap: () {
-                            openBrowser('website url');
+                            openBrowser('https://3asekka.com/');
                           },
                           child: Text(
                             languages[choosenLanguage]['text_about'],

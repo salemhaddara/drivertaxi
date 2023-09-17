@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "573173189663",
+    "firebase_url": "https://asekka-fec66-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "asekka-fec66",
+    "storage_bucket": "asekka-fec66.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:573173189663:android:2a1f11313d83784d9d192a",
+        "android_client_info": {
+          "package_name": "com.threeasekka.rider"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "573173189663-3ke6jp550rt2a13d3mss5gi99ujfh8jb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAD2A3wmVvxXwcX3ffTX1c7ko1K2dS4EDY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "573173189663-3ke6jp550rt2a13d3mss5gi99ujfh8jb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:573173189663:android:5fc3a8b9149e32759d192a",
+        "android_client_info": {
+          "package_name": "com.threeasekka.user"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "573173189663-3ke6jp550rt2a13d3mss5gi99ujfh8jb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAD2A3wmVvxXwcX3ffTX1c7ko1K2dS4EDY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "573173189663-3ke6jp550rt2a13d3mss5gi99ujfh8jb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

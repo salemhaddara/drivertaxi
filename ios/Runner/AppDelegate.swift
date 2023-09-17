@@ -10,7 +10,7 @@ import Firebase
     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
   ) -> Bool {
     FirebaseApp.configure()
-    GMSServices.provideAPIKey("map-key")
+    GMSServices.provideAPIKey("AIzaSyA7yq8ZiUAAqPhtfZAV9h7RXWnpKSmhoPY")
     GeneratedPluginRegistrant.register(with: self)
     application.registerForRemoteNotifications()
    UIApplication.shared.beginReceivingRemoteControlEvents()
