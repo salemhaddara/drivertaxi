@@ -10,7 +10,8 @@ import 'package:tagxibiddingdriver/translation/translation.dart';
 import 'package:tagxibiddingdriver/widgets/widgets.dart';
 
 class DocsProcess extends StatefulWidget {
-  const DocsProcess({Key? key}) : super(key: key);
+  List<Map<dynamic, dynamic>>? data;
+  DocsProcess({Key? key, this.data}) : super(key: key);
 
   @override
   State<DocsProcess> createState() => _DocsProcessState();

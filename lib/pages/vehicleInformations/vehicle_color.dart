@@ -12,8 +12,11 @@ import 'package:tagxibiddingdriver/styles/styles.dart';
 import 'package:tagxibiddingdriver/translation/translation.dart';
 import 'package:tagxibiddingdriver/widgets/widgets.dart';
 
+List<Map<dynamic, dynamic>> data = [];
+
 class VehicleColor extends StatefulWidget {
-  const VehicleColor({Key? key}) : super(key: key);
+  List<Map<dynamic, dynamic>>? data;
+  VehicleColor({Key? key, this.data}) : super(key: key);
 
   @override
   State<VehicleColor> createState() => _VehicleColorState();
@@ -55,8 +58,16 @@ class _VehicleColorState extends State<VehicleColor> {
   }
 
   @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     var media = MediaQuery.of(context).size;
+    if (widget.data != null) {
+      data.addAll(widget.data!);
+    }
     return Material(
         child: Directionality(
       textDirection:
@@ -144,6 +155,7 @@ class _VehicleColorState extends State<VehicleColor> {
                                   setState(() {
                                     _isLoading = false;
                                   });
+                                  print('reg : $reg ');
                                   if (reg == 'true') {
                                     navigateRef();
                                     serviceLocations.clear();

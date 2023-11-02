@@ -801,8 +801,7 @@ class _MapsState extends State<Maps>
                 WidgetsBinding.instance.addPostFrameCallback((_) {
                   Navigator.pushAndRemoveUntil(
                       context,
-                      MaterialPageRoute(
-                          builder: (context) => const DocsProcess()),
+                      MaterialPageRoute(builder: (context) => DocsProcess()),
                       (route) => false);
                 });
               }
@@ -6274,7 +6273,7 @@ class _MapsState extends State<Maps>
                                                                 Radius.circular(
                                                                     10))
                                                         : const BorderRadius
-                                                                .only(
+                                                            .only(
                                                             topRight:
                                                                 Radius.circular(
                                                                     10),
@@ -6393,8 +6392,9 @@ class _MapsState extends State<Maps>
                                                                   ? Column(
                                                                       children: [
                                                                         Container(
-                                                                          padding:
-                                                                              const EdgeInsets.only(bottom: 5),
+                                                                          padding: const EdgeInsets
+                                                                              .only(
+                                                                              bottom: 5),
                                                                           child:
                                                                               Text(
                                                                             (i + 1).toString(),

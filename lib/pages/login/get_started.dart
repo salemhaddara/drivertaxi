@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -14,7 +15,8 @@ import './login.dart';
 import '../vehicleInformations/service_area.dart';
 
 class GetStarted extends StatefulWidget {
-  const GetStarted({Key? key}) : super(key: key);
+  List<Map<dynamic, dynamic>>? data;
+  GetStarted({Key? key, this.data}) : super(key: key);
 
   @override
   State<GetStarted> createState() => _GetStartedState();
@@ -36,13 +38,21 @@ class _GetStartedState extends State<GetStarted> {
   ImagePicker picker = ImagePicker();
   bool _pickImage = false;
   String _permission = '';
-
   getGalleryPermission() async {
-    var status = await Permission.photos.status;
-    if (status != PermissionStatus.granted) {
-      status = await Permission.photos.request();
+    if (Platform.isIOS) {
+      var status = await Permission.photos.status;
+      if (status != PermissionStatus.granted) {
+        status = await Permission.photos.request();
+      }
+      return status;
+    } else {
+      print('android permission');
+      var status = await Permission.storage.status;
+      if (status != PermissionStatus.granted) {
+        status = await Permission.storage.request();
+      }
+      return status;
     }
-    return status;
   }
 
 //get camera permission
@@ -89,11 +99,18 @@ class _GetStartedState extends State<GetStarted> {
   //navigate
   navigate() {
     Navigator.push(
-        context, MaterialPageRoute(builder: (context) => const ServiceArea()));
+        context,
+        MaterialPageRoute(
+            builder: (context) => ServiceArea(
+                  data: widget.data,
+                )));
   }
 
   @override
   void initState() {
+    print('getStarted Screen');
+    nameText.text = extractName(widget.data![1]['dlf']);
+    name = extractName(widget.data![1]['dlf']);
     proImageFile1 = null;
     super.initState();
   }
@@ -357,6 +374,7 @@ class _GetStartedState extends State<GetStarted> {
                                       width: media.width * 0.25,
                                       child: InkWell(
                                         onTap: () {
+                                          print(name);
                                           setState(() {
                                             transportType = 'delivery';
                                           });
@@ -778,5 +796,17 @@ class _GetStartedState extends State<GetStarted> {
         ),
       ),
     );
+  }
+
+  String extractName(String inputString) {
+    // Define a regular expression pattern to match the name after "خاصه"
+    RegExp regex = RegExp(r'خاصه\s+(.+)');
+
+    Match? match = regex.firstMatch(inputString);
+    if (match != null) {
+      return match.group(1)!;
+    } else {
+      return '';
+    }
   }
 }

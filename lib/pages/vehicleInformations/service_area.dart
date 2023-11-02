@@ -9,7 +9,8 @@ import '../loadingPage/loading.dart';
 import '../../styles/styles.dart';
 
 class ServiceArea extends StatefulWidget {
-  const ServiceArea({Key? key}) : super(key: key);
+  List<Map<dynamic, dynamic>>? data;
+  ServiceArea({Key? key, this.data}) : super(key: key);
 
   @override
   State<ServiceArea> createState() => _ServiceAreaState();
@@ -144,7 +145,7 @@ class _ServiceAreaState extends State<ServiceArea> {
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) =>
-                                            const VehicleType()));
+                                            VehicleType(data: widget.data)));
                               },
                               text: languages[choosenLanguage]['text_next']),
                         )

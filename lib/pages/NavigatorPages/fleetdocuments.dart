@@ -442,11 +442,20 @@ class _UploadDocsState extends State<UploadDocs> {
 
 //get gallery permission
   getGalleryPermission() async {
-    var status = await Permission.photos.status;
-    if (status != PermissionStatus.granted) {
-      status = await Permission.photos.request();
+    if (Platform.isIOS) {
+      var status = await Permission.photos.status;
+      if (status != PermissionStatus.granted) {
+        status = await Permission.photos.request();
+      }
+      return status;
+    } else {
+      print('android permission');
+      var status = await Permission.storage.status;
+      if (status != PermissionStatus.granted) {
+        status = await Permission.storage.request();
+      }
+      return status;
     }
-    return status;
   }
 
 // navigate pop

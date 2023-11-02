@@ -9,7 +9,8 @@ import 'package:tagxibiddingdriver/translation/translation.dart';
 import 'package:tagxibiddingdriver/widgets/widgets.dart';
 
 class VehicleModel extends StatefulWidget {
-  const VehicleModel({Key? key}) : super(key: key);
+  List<Map<dynamic, dynamic>>? data;
+  VehicleModel({Key? key, this.data}) : super(key: key);
 
   @override
   State<VehicleModel> createState() => _VehicleModelState();
@@ -145,7 +146,7 @@ class _VehicleModelState extends State<VehicleModel> {
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) =>
-                                            const VehicleYear()));
+                                            VehicleYear(data: widget.data)));
                               },
                               text: languages[choosenLanguage]['text_next']),
                         )

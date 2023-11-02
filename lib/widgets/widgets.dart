@@ -76,7 +76,7 @@ class InputField extends StatefulWidget {
   dynamic inputType;
   dynamic maxLength;
   dynamic color;
-
+  String? value;
   // ignore: use_key_in_widget_constructors
   InputField(
       {this.icon,
@@ -85,7 +85,8 @@ class InputField extends StatefulWidget {
       required this.textController,
       this.inputType,
       this.maxLength,
-      this.color});
+      this.color,
+      this.value});
 
   @override
   State<InputField> createState() => _InputFieldState();
@@ -97,6 +98,7 @@ class _InputFieldState extends State<InputField> {
     var media = MediaQuery.of(context).size;
     return TextFormField(
       maxLength: (widget.maxLength == null) ? null : widget.maxLength,
+      initialValue: widget.value,
       keyboardType: (widget.inputType == null)
           ? TextInputType.emailAddress
           : widget.inputType,

@@ -198,10 +198,8 @@ class _UpdateVehicleState extends State<UpdateVehicle> {
               //navigate to pick service page
               Button(
                   onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const ServiceArea()));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => ServiceArea()));
                   },
                   text: languages[choosenLanguage]['text_edit'])
             ],

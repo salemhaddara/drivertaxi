@@ -47,7 +47,7 @@ class _LoadingPageState extends State<LoadingPage> {
       Navigator.pushReplacement(
           context,
           MaterialPageRoute(
-            builder: (context) => const DocsProcess(),
+            builder: (context) => DocsProcess(),
           ));
     } else if (userDetails['uploaded_document'] == true &&
         userDetails['approve'] == true) {

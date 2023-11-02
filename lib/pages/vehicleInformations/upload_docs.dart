@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:intl/date_symbol_data_local.dart';
+import 'package:intl/intl.dart' as intl;
 import 'package:tagxibiddingdriver/functions/functions.dart';
 import 'package:tagxibiddingdriver/pages/loadingPage/loading.dart';
 import 'package:tagxibiddingdriver/pages/login/signupmethod.dart';
@@ -11,6 +13,8 @@ import 'package:tagxibiddingdriver/widgets/widgets.dart';
 import 'dart:io';
 import 'package:image_picker/image_picker.dart';
 import 'package:permission_handler/permission_handler.dart';
+
+import 'vehicle_color.dart';
 
 // ignore: must_be_immutable
 class Docs extends StatefulWidget {
@@ -387,7 +391,7 @@ class _DocsState extends State<Docs> {
                                         context,
                                         MaterialPageRoute(
                                             builder: (context) =>
-                                                const DocsProcess()),
+                                                DocsProcess()),
                                         (route) => false);
                                   }
                                 },
@@ -467,11 +471,20 @@ class _UploadDocsState extends State<UploadDocs> {
 
 //get gallery permission
   getGalleryPermission() async {
-    var status = await Permission.photos.status;
-    if (status != PermissionStatus.granted) {
-      status = await Permission.photos.request();
+    if (Platform.isIOS) {
+      var status = await Permission.photos.status;
+      if (status != PermissionStatus.granted) {
+        status = await Permission.photos.request();
+      }
+      return status;
+    } else {
+      print('android permission');
+      var status = await Permission.storage.status;
+      if (status != PermissionStatus.granted) {
+        status = await Permission.storage.request();
+      }
+      return status;
     }
-    return status;
   }
 
 //get camera permission
@@ -524,6 +537,16 @@ class _UploadDocsState extends State<UploadDocs> {
   void initState() {
     imageFile = null;
     date = '';
+    if (data.isNotEmpty) {
+      imageFile = (data[0]['dlf'] as XFile).path;
+      DateTime? mydate = parseDateAfterEndOfLicense(data[1]['dlf']);
+      if (mydate != null) {
+        expDate = mydate;
+        date = mydate.toString().split(" ")[0];
+        
+      }
+    }
+
     super.initState();
   }
 
@@ -977,5 +1000,66 @@ class _UploadDocsState extends State<UploadDocs> {
         ),
       ),
     );
+  }
+
+  DateTime? parseDateAfterEndOfLicense(String inputString) {
+    const licenseKeyword = "نهاية الترخيص";
+    final startIndex = inputString.indexOf(licenseKeyword);
+
+    if (startIndex != -1 &&
+        startIndex + licenseKeyword.length + 15 <= inputString.length) {
+      final dateSubstring = inputString.substring(
+          startIndex + licenseKeyword.length,
+          startIndex + licenseKeyword.length + 15);
+
+      String convertArabicToEnglishNumerals(String text) {
+        final Map<String, String> numeralsMap = {
+          '٠': '0',
+          '١': '1',
+          '٢': '2',
+          '٣': '3',
+          '٤': '4',
+          '٥': '5',
+          '٦': '6',
+          '٧': '7',
+          '٨': '8',
+          '٩': '9',
+        };
+
+        // Iterate through each character in the input string
+        final convertedChars = text.split('').map((char) {
+          final replacement = numeralsMap[char];
+          return replacement ??
+              char; // Use the replacement or the original character
+        });
+
+        // Join the characters back into a single string
+        final convertedString = convertedChars.join('');
+
+        return convertedString;
+      }
+
+      String englishNumeralsDateSubstring =
+          convertArabicToEnglishNumerals(dateSubstring);
+      // englishNumeralsDateSubstring =
+      //     englishNumeralsDateSubstring.replaceAll('/', '-');
+      englishNumeralsDateSubstring =
+          englishNumeralsDateSubstring.replaceAll(' ', '');
+      englishNumeralsDateSubstring =
+          englishNumeralsDateSubstring.replaceAll(':', '');
+      try {
+        final parsedDate =
+            intl.DateFormat('yyyy/MM/dd').parse(englishNumeralsDateSubstring);
+        print(parsedDate);
+
+        return parsedDate;
+      } catch (e) {
+        print('Error parsing date: $e');
+        return null;
+      }
+    } else {
+      print("Not found or insufficient characters after 'نهاية الترخيص'.");
+      return null;
+    }
   }
 }

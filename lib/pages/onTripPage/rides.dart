@@ -248,7 +248,7 @@ class _RidePageState extends State<RidePage> with WidgetsBindingObserver {
                         Navigator.pushAndRemoveUntil(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const DocsProcess()),
+                                builder: (context) => DocsProcess()),
                             (route) => false);
                       });
                     }
@@ -1074,7 +1074,7 @@ class _RidePageState extends State<RidePage> with WidgetsBindingObserver {
                                                               MaterialPageRoute(
                                                                   builder:
                                                                       (context) =>
-                                                                          const Login()),
+                                                                          Login()),
                                                               (route) => false);
                                                           userDetails.clear();
                                                         });

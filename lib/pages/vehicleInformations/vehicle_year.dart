@@ -8,7 +8,8 @@ import 'package:tagxibiddingdriver/translation/translation.dart';
 import 'package:tagxibiddingdriver/widgets/widgets.dart';
 
 class VehicleYear extends StatefulWidget {
-  const VehicleYear({Key? key}) : super(key: key);
+  List<Map<dynamic, dynamic>>? data;
+  VehicleYear({Key? key, this.data}) : super(key: key);
 
   @override
   State<VehicleYear> createState() => _VehicleYearState();
@@ -20,6 +21,11 @@ class _VehicleYearState extends State<VehicleYear> {
   String dateError = '';
 
   TextEditingController controller = TextEditingController();
+  @override
+  void initState() {
+// controller.text=;
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -124,11 +130,13 @@ class _VehicleYearState extends State<VehicleYear> {
                                       int.parse(DateTime.now().year.toString()))
                                   ? Button(
                                       onTap: () {
+                                        print(widget.data);
                                         Navigator.push(
                                             context,
                                             MaterialPageRoute(
                                                 builder: (context) =>
-                                                    const VehicleNumber()));
+                                                    VehicleNumber(
+                                                        data: widget.data)));
                                       },
                                       text: languages[choosenLanguage]
                                           ['text_next'])

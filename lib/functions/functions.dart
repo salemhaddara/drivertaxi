@@ -58,7 +58,8 @@ String ischeckownerordriver = '';
 String transportType = '';
 
 //base url
-String url = 'https://3asekka.com/'; //add '/' at the end of the url as 'https://url.com/'
+String url =
+    'https://3asekka.com/'; //add '/' at the end of the url as 'https://url.com/'
 String mapkey = 'AIzaSyA7yq8ZiUAAqPhtfZAV9h7RXWnpKSmhoPY';
 String mapStyle = '';
 
@@ -248,7 +249,7 @@ uploadDocs() async {
     if (request.statusCode == 200) {
       result = val['message'];
     } else if (request.statusCode == 422) {
-      debugPrint(respon.body);
+      print(respon.body);
       var error = jsonDecode(respon.body)['errors'];
       result = error[error.keys.toList()[0]]
           .toString()
@@ -258,7 +259,7 @@ uploadDocs() async {
     } else if (request.statusCode == 401) {
       result = 'logout';
     } else {
-      debugPrint(respon.body);
+      print(respon.body);
       result = val['message'];
     }
   } catch (e) {
@@ -562,33 +563,40 @@ registerDriver() async {
   dynamic result;
   try {
     var token = await FirebaseMessaging.instance.getToken();
+    print('token $token');
     var fcm = token.toString();
+    print('fcm $fcm');
     final response = http.MultipartRequest(
         'POST', Uri.parse('${url}api/v1/driver/register'));
-
+    print(response);
     response.headers.addAll({'Content-Type': 'application/json'});
     if (proImageFile1 != null) {
       response.files.add(
           await http.MultipartFile.fromPath('profile_picture', proImageFile1));
     }
-    response.fields.addAll({
-      "name": name,
-      "mobile": phnumber,
-      "email": email,
-      "device_token": fcm,
-      "country": countries[phcode]['dial_code'],
-      "service_location_id": myServiceId.toString(),
-      "login_by": (platform == TargetPlatform.android) ? 'android' : 'ios',
-      // "vehicle_type": myVehicleId.toString(),
-      "vehicle_types": jsonEncode(vehicletypelist),
-      "car_make": vehicleMakeId.toString(),
-      "car_model": vehicleModelId.toString(),
-      "car_color": vehicleColor,
-      "car_number": vehicleNumber,
-      "vehicle_year": modelYear,
-      'lang': choosenLanguage,
-      'transport_type': transportType
-    });
+    try {
+      response.fields.addAll({
+        "name": name,
+        "mobile": phnumber,
+        "email": email,
+        "device_token": fcm,
+        "country": countries[phcode]['dial_code'],
+        "service_location_id": myServiceId.toString(),
+        "login_by": (platform == TargetPlatform.android) ? 'android' : 'ios',
+        // "vehicle_type": myVehicleId.toString(),
+        "vehicle_types": jsonEncode(vehicletypelist),
+        "car_make": vehicleMakeId.toString(),
+        "car_model": vehicleModelId.toString(),
+        "car_color": vehicleColor,
+        "car_number": vehicleNumber,
+        "vehicle_year": modelYear,
+        'lang': choosenLanguage,
+        'transport_type': transportType
+      });
+    } catch (e) {
+      print(e);
+    }
+    print('vehicule $vehicleColor ${response.fields}');
     var request = await response.send();
     var respon = await http.Response.fromStream(request);
 
@@ -620,6 +628,7 @@ registerDriver() async {
           .replaceAll('[', '')
           .replaceAll(']', '')
           .toString();
+      result = respon.body;
     } else {
       debugPrint(respon.body);
       result = jsonDecode(respon.body)['message'];
@@ -648,7 +657,6 @@ addDriver() async {
           "car_color": vehicleColor,
           "car_number": vehicleNumber,
         }));
-
     if (response.statusCode == 200) {
       result = 'true';
     } else if (response.statusCode == 422) {

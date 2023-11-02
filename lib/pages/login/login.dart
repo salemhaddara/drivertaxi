@@ -8,7 +8,8 @@ import '../../functions/functions.dart';
 import '../../widgets/widgets.dart';
 
 class Login extends StatefulWidget {
-  const Login({Key? key}) : super(key: key);
+  List<Map<dynamic, dynamic>>? data;
+  Login({Key? key, this.data}) : super(key: key);
 
   @override
   State<Login> createState() => _LoginState();
@@ -27,6 +28,7 @@ class _LoginState extends State<Login> {
 
   @override
   void initState() {
+    print('Login Screen');
     countryCode();
     super.initState();
   }
@@ -34,7 +36,11 @@ class _LoginState extends State<Login> {
   //navigate
   navigate() {
     Navigator.push(
-        context, MaterialPageRoute(builder: (context) => const Otp()));
+        context,
+        MaterialPageRoute(
+            builder: (context) => Otp(
+                  data: widget.data,
+                )));
   }
 
   countryCode() async {
@@ -132,7 +138,7 @@ class _LoginState extends State<Login> {
                                                       Container(
                                                         padding:
                                                             const EdgeInsets
-                                                                    .only(
+                                                                .only(
                                                                 left: 20,
                                                                 right: 20),
                                                         height: 40,

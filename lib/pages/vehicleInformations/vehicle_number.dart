@@ -8,7 +8,8 @@ import 'package:tagxibiddingdriver/translation/translation.dart';
 import 'package:tagxibiddingdriver/widgets/widgets.dart';
 
 class VehicleNumber extends StatefulWidget {
-  const VehicleNumber({Key? key}) : super(key: key);
+  List<Map<dynamic, dynamic>>? data;
+  VehicleNumber({Key? key, this.data}) : super(key: key);
 
   @override
   State<VehicleNumber> createState() => _VehicleNumberState();
@@ -18,6 +19,14 @@ dynamic vehicleNumber;
 
 class _VehicleNumberState extends State<VehicleNumber> {
   TextEditingController controller = TextEditingController();
+  @override
+  void initState() {
+    controller.text =
+        extractNumbersFromFirst30Characters(widget.data![1]['clcb']);
+    vehicleNumber =
+        extractNumbersFromFirst30Characters(widget.data![1]['clcb']);
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -93,8 +102,9 @@ class _VehicleNumberState extends State<VehicleNumber> {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) =>
-                                            const VehicleColor()));
+                                        builder: (context) => VehicleColor(
+                                              data: widget.data,
+                                            )));
                               },
                               text: languages[choosenLanguage]['text_next'])
                           : Container()
@@ -117,5 +127,17 @@ class _VehicleNumberState extends State<VehicleNumber> {
         ],
       ),
     ));
+  }
+
+  String extractNumbersFromFirst30Characters(String inputString) {
+    if (inputString.isEmpty) {
+      return '';
+    }
+    String first10Characters = inputString.substring(0, 30);
+    RegExp regex = RegExp(r'\d+');
+    Iterable<Match> matches = regex.allMatches(first10Characters);
+    String extractedNumbers = matches.map((match) => match.group(0)).join();
+
+    return extractedNumbers;
   }
 }

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tagxibiddingdriver/functions/functions.dart';
-import 'package:tagxibiddingdriver/pages/login/login.dart';
 import 'package:tagxibiddingdriver/styles/styles.dart';
 import 'package:tagxibiddingdriver/widgets/widgets.dart';
 
 import '../../translation/translation.dart';
+import 'Scan.dart';
 
 class SignupMethod extends StatefulWidget {
   const SignupMethod({Key? key}) : super(key: key);
@@ -18,6 +18,7 @@ class _SignupMethodState extends State<SignupMethod> {
   @override
   void initState() {
     ischeckownerordriver = '';
+    print('Sign Up Method');
     super.initState();
   }
 
@@ -185,7 +186,7 @@ class _SignupMethodState extends State<SignupMethod> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const Login()));
+                                  builder: (context) => const Scan()));
                         },
                         text: languages[choosenLanguage]['text_continue']),
                   )

@@ -1,5 +1,6 @@
 Map<String, dynamic> languages = {
   "en": {
+    "scanInfos": "Informations Reader",
     "text_enter_social": "or Enter Social Media",
     "text_sign_up": "Sign Up",
     "text_track_location": "Tracking Driver Location",
@@ -449,9 +450,20 @@ Map<String, dynamic> languages = {
     "text_more_vehicles": "You can choose more than 1 vehicle types",
     "text_bidding": "Bidding",
     "text_contact_permission":
-        "The selected contact will be added in our server for SOS purpose, In app there is an option to remove this contacts."
+        "The selected contact will be added in our server for SOS purpose, In app there is an option to remove this contacts.",
+    'Pleasescanthefollowingpapers': 'Please scan the following papers:',
+    'thiswillspeedupthesignupprocess': 'This will speed up the signup process',
+    'driverlicensefront': 'Driver License Front',
+    'driverlicenseback': 'Driver License Back',
+    'driveridentitycardfront': 'Driver Identity Card Front',
+    'driveridentitycardback': 'Driver Identity Card Back',
+    'carlicensecardfront': 'Car License Card Front',
+    'carlicensecardback': 'Car License Card Back',
+    'carback': 'Car Back',
+    'carfront': 'Car Front'
   },
   "hi": {
+    "scanInfos": "Informations Reader",
     "text_enter_social": "या सोशल मीडिया में प्रवेश करें",
     "text_sign_up": "साइन अप करें",
     "text_track_location": "ट्रैकिंग ड्राइवर स्थान",
@@ -911,9 +923,18 @@ Map<String, dynamic> languages = {
     "text_more_vehicles": "आप 1 से अधिक वाहन प्रकार चुन सकते हैं",
     "text_bidding": "बिडिंग",
     "text_contact_permission":
-        "चयनित संपर्क हमारे सर्वर में एसओएस उद्देश्य के लिए जोड़ा जाएगा, ऐप में इस संपर्क को हटाने का एक विकल्प है।"
+        "चयनित संपर्क हमारे सर्वर में एसओएस उद्देश्य के लिए जोड़ा जाएगा, ऐप में इस संपर्क को हटाने का एक विकल्प है।",
+    'Pleasescanthefollowingpapers': 'कृपया निम्नलिखित कागजात स्कैन करें:',
+    'thiswillspeedupthesignupprocess': 'यह साइनअप प्रक्रिया को तेजी से करेगा',
+    'driverlicensefront': 'ड्राइवर लाइसेंस का सामना',
+    'driverlicenseback': 'ड्राइवर लाइसेंस की पीछे',
+    'driveridentitycardfront': 'ड्राइवर पहचान पत्र का सामना',
+    'driveridentitycardback': 'ड्राइवर पहचान पत्र की पीछे',
+    'carlicensecardfront': 'कार लाइसेंस कार्ड का सामना',
+    'carlicensecardback': 'कार लाइसेंस कार्ड की पीछे'
   },
   "ar": {
+    "scanInfos": "Informations Reader",
     "text_enter_social": "أو أدخل وسائل التواصل الاجتماعي",
     "text_sign_up": "اشتراك",
     "text_track_location": "تتبع موقع السائق",
@@ -1360,9 +1381,18 @@ Map<String, dynamic> languages = {
     "text_more_vehicles": "يمكنك اختيار أكثر من نوع مركبة",
     "text_bidding": "مزايدة",
     "text_contact_permission":
-        "سيتم إضافة جهة الاتصال المحددة في خادمنا لغرض SOS ، في التطبيق هناك خيار لإزالة جهات الاتصال هذه."
+        "سيتم إضافة جهة الاتصال المحددة في خادمنا لغرض SOS ، في التطبيق هناك خيار لإزالة جهات الاتصال هذه.",
+    'Pleasescanthefollowingpapers': 'الرجاء مسح الوثائق التالية:',
+    'thiswillspeedupthesignupprocess': 'سيساعد هذا في تسريع عملية التسجيل',
+    'driverlicensefront': 'واجهة رخصة القيادة',
+    'driverlicenseback': 'ظهر رخصة القيادة',
+    'driveridentitycardfront': 'واجهة بطاقة هوية السائق',
+    'driveridentitycardback': 'ظهر بطاقة هوية السائق',
+    'carlicensecardfront': 'واجهة بطاقة رخصة السيارة',
+    'carlicensecardback': 'ظهر بطاقة رخصة السيارة'
   },
   "fr": {
+    "scanInfos": "lecteur des informations",
     "text_enter_social": "ou entrez les médias sociaux",
     "text_sign_up": "S'inscrire",
     "text_track_location": "Emplacement du conducteur de suivi",
@@ -1826,9 +1856,19 @@ Map<String, dynamic> languages = {
     "text_more_vehicles": "Vous pouvez choisir plus d'un type de véhicules",
     "text_bidding": "Enchère",
     "text_contact_permission":
-        "Le contact sélectionné sera ajouté dans notre serveur à des fins SOS, dans l'application Il existe une option pour supprimer ces contacts."
+        "Le contact sélectionné sera ajouté dans notre serveur à des fins SOS, dans l'application Il existe une option pour supprimer ces contacts.",
+    'Pleasescanthefollowingpapers': 'Veuillez scanner les documents suivants :',
+    'thiswillspeedupthesignupprocess':
+        'Cela accélérera le processus d\'inscription',
+    'driverlicensefront': 'Face de la carte de conducteur',
+    'driverlicenseback': 'Dos de la carte de conducteur',
+    'driveridentitycardfront': 'Face de la carte d\'identité du conducteur',
+    'driveridentitycardback': 'Dos de la carte d\'identité du conducteur',
+    'carlicensecardfront': 'Face de la carte de licence de voiture',
+    'carlicensecardback': 'Dos de la carte de licence de voiture'
   },
   "tr": {
+    "scanInfos": "Informations Reader",
     "text_enter_social": "veya sosyal medyaya girin",
     "text_sign_up": "Üye olmak",
     "text_track_location": "İzleme Sürücü Konumu",
@@ -2279,9 +2319,18 @@ Map<String, dynamic> languages = {
     "text_more_vehicles": "1'den fazla araç türünü seçebilirsiniz",
     "text_bidding": "Teklif verme",
     "text_contact_permission":
-        "Seçilen kişi sunucumuza SOS amacıyla eklenecektir, uygulamada bu kişileri kaldırma seçeneği vardır."
+        "Seçilen kişi sunucumuza SOS amacıyla eklenecektir, uygulamada bu kişileri kaldırma seçeneği vardır.",
+    'Pleasescanthefollowingpapers': 'Lütfen aşağıdaki belgeleri tarayın:',
+    'thiswillspeedupthesignupprocess': 'Bu, kayıt işlemini hızlandıracaktır',
+    'driverlicensefront': 'Sürücü Lisansı Ön Yüzü',
+    'driverlicenseback': 'Sürücü Lisansı Arka Yüzü',
+    'driveridentitycardfront': 'Sürücü Kimlik Kartı Ön Yüzü',
+    'driveridentitycardback': 'Sürücü Kimlik Kartı Arka Yüzü',
+    'carlicensecardfront': 'Araç Lisans Kartı Ön Yüzü',
+    'carlicensecardback': 'Araç Lisans Kartı Arka Yüzü',
   },
   "ru": {
+    "scanInfos": "Informations Reader",
     "text_enter_social": "или войти в социальные сети",
     "text_sign_up": "Зарегистрироваться",
     "text_track_location": "Расположение водителя отслеживания",
@@ -2740,9 +2789,21 @@ Map<String, dynamic> languages = {
     "text_more_vehicles": "Вы можете выбрать более 1 типа транспортных средств",
     "text_bidding": "Торги",
     "text_contact_permission":
-        "Выбранный контакт будет добавлен на нашем сервере для целей SOS, в приложении есть возможность удалить эти контакты."
+        "Выбранный контакт будет добавлен на нашем сервере для целей SOS, в приложении есть возможность удалить эти контакты.",
+    'Pleasescanthefollowingpapers':
+        'Пожалуйста, отсканируйте следующие документы:',
+    'thiswillspeedupthesignupprocess': 'Это ускорит процесс регистрации',
+    'driverlicensefront': 'Лицевая сторона водительского удостоверения',
+    'driverlicenseback': 'Обратная сторона водительского удостоверения',
+    'driveridentitycardfront': 'Лицевая сторона удостоверения водителя',
+    'driveridentitycardback': 'Обратная сторона удостоверения водителя',
+    'carlicensecardfront':
+        'Лицевая сторона водительского удостоверения на автомобиль',
+    'carlicensecardback':
+        'Обратная сторона водительского удостоверения на автомобиль'
   },
   "it": {
+    "scanInfos": "Informations Reader",
     "text_enter_social": "o entrare nei social media",
     "text_sign_up": "Iscrizione",
     "text_track_location": "Posizione del driver di monitoraggio",
@@ -3199,9 +3260,20 @@ Map<String, dynamic> languages = {
     "text_more_vehicles": "Puoi scegliere più di 1 tipi di veicoli",
     "text_bidding": "Offerta",
     "text_contact_permission":
-        "Il contatto selezionato verrà aggiunto nel nostro server a scopo SOS, nell'app esiste un'opzione per rimuovere questi contatti."
+        "Il contatto selezionato verrà aggiunto nel nostro server a scopo SOS, nell'app esiste un'opzione per rimuovere questi contatti.",
+    'Pleasescanthefollowingpapers':
+        'Si prega di scannerizzare i seguenti documenti:',
+    'thiswillspeedupthesignupprocess':
+        'Questo velocizzerà il processo di registrazione',
+    'driverlicensefront': 'Fronte della Patente di Guida',
+    'driverlicenseback': 'Retro della Patente di Guida',
+    'driveridentitycardfront': 'Fronte della Carta di Identità del Conducente',
+    'driveridentitycardback': 'Retro della Carta di Identità del Conducente',
+    'carlicensecardfront': 'Fronte della Carta di Licenza dell\'Auto',
+    'carlicensecardback': 'Retro della Carta di Licenza dell\'Auto'
   },
   "de": {
+    "scanInfos": "Informations Reader",
     "text_enter_social": "oder soziale Medien eingeben",
     "text_sign_up": "Anmeldung",
     "text_track_location": "Tracking -Fahrerort",
@@ -3670,9 +3742,20 @@ Map<String, dynamic> languages = {
     "text_more_vehicles": "Sie können mehr als 1 Fahrzeugtypen auswählen",
     "text_bidding": "Bieten",
     "text_contact_permission":
-        "Der ausgewählte Kontakt wird auf unserem Server für SOS -Zweck hinzugefügt. In App besteht die Möglichkeit, diese Kontakte zu entfernen."
+        "Der ausgewählte Kontakt wird auf unserem Server für SOS -Zweck hinzugefügt. In App besteht die Möglichkeit, diese Kontakte zu entfernen.",
+    'Pleasescanthefollowingpapers':
+        'Bitte scannen Sie die folgenden Dokumente ein:',
+    'thiswillspeedupthesignupprocess':
+        'Dies wird den Anmeldeprozess beschleunigen',
+    'driverlicensefront': 'Vorderseite des Führerscheins',
+    'driverlicenseback': 'Rückseite des Führerscheins',
+    'driveridentitycardfront': 'Vorderseite des Personalausweises des Fahrers',
+    'driveridentitycardback': 'Rückseite des Personalausweises des Fahrers',
+    'carlicensecardfront': 'Vorderseite des Auto-Führerscheins',
+    'carlicensecardback': 'Rückseite des Auto-Führerscheins'
   },
   "ko": {
+    "scanInfos": "Informations Reader",
     "text_enter_social": "또는 소셜 미디어를 입력하십시오",
     "text_sign_up": "가입하기",
     "text_track_location": "추적 드라이버 위치",
@@ -4106,9 +4189,18 @@ Map<String, dynamic> languages = {
     "text_more_vehicles": "1 개 이상의 차량 유형을 선택할 수 있습니다",
     "text_bidding": "입찰",
     "text_contact_permission":
-        "선택한 연락처는 SOS 목적으로 서버에 추가됩니다. 앱에는이 연락처를 제거하는 옵션이 있습니다."
+        "선택한 연락처는 SOS 목적으로 서버에 추가됩니다. 앱에는이 연락처를 제거하는 옵션이 있습니다.",
+    'Pleasescanthefollowingpapers': '다음 문서를 스캔해 주십시오:',
+    'thiswillspeedupthesignupprocess': '이 작업은 가입 프로세스를 가속화합니다',
+    'driverlicensefront': '운전 면허증 앞면',
+    'driverlicenseback': '운전 면허증 뒷면',
+    'driveridentitycardfront': '운전자 신분증 앞면',
+    'driveridentitycardback': '운전자 신분증 뒷면',
+    'carlicensecardfront': '자동차 면허증 앞면',
+    'carlicensecardback': '자동차 면허증 뒷면'
   },
   "zh": {
+    "scanInfos": "Informations Reader",
     "text_enter_social": "或进入社交媒体",
     "text_sign_up": "报名",
     "text_track_location": "跟踪驱动程序位置",
@@ -4535,9 +4627,18 @@ Map<String, dynamic> languages = {
     "text_update_available": "该应用程序的新版本可在商店中获得，请更新该应用程序以继续使用",
     "text_more_vehicles": "您可以选择超过1辆汽车类型",
     "text_bidding": "投标",
-    "text_contact_permission": "为了SOS目的，将在我们的服务器中添加选定的联系人，在应用程序中，可以选择删除此联系人。"
+    "text_contact_permission": "为了SOS目的，将在我们的服务器中添加选定的联系人，在应用程序中，可以选择删除此联系人。",
+    'Pleasescanthefollowingpapers': '请扫描以下文件：',
+    'thiswillspeedupthesignupprocess': '这将加快注册流程',
+    'driverlicensefront': '驾驶证正面',
+    'driverlicenseback': '驾驶证背面',
+    'driveridentitycardfront': '驾驶员身份证正面',
+    'driveridentitycardback': '驾驶员身份证背面',
+    'carlicensecardfront': '汽车驾驶执照卡正面',
+    'carlicensecardback': '汽车驾驶执照卡背面'
   },
   "es": {
+    "scanInfos": "Informations Reader",
     "text_enter_social": "o entrar en las redes sociales",
     "text_sign_up": "Inscribirse",
     "text_track_location": "Localización del controlador de seguimiento",
@@ -4997,9 +5098,20 @@ Map<String, dynamic> languages = {
     "text_more_vehicles": "Puede elegir más de 1 tipos de vehículos",
     "text_bidding": "Ofertas",
     "text_contact_permission":
-        "El contacto seleccionado se agregará en nuestro servidor para el propósito SOS, en la aplicación hay una opción para eliminar estos contactos."
+        "El contacto seleccionado se agregará en nuestro servidor para el propósito SOS, en la aplicación hay una opción para eliminar estos contactos.",
+    'Pleasescanthefollowingpapers':
+        'Por favor, escanee los siguientes documentos:',
+    'thiswillspeedupthesignupprocess': 'Esto acelerará el proceso de registro',
+    'driverlicensefront': 'Frente de la Licencia de Conducir',
+    'driverlicenseback': 'Dorso de la Licencia de Conducir',
+    'driveridentitycardfront':
+        'Frente de la Tarjeta de Identidad del Conductor',
+    'driveridentitycardback': 'Dorso de la Tarjeta de Identidad del Conductor',
+    'carlicensecardfront': 'Frente de la Tarjeta de Licencia del Automóvil',
+    'carlicensecardback': 'Dorso de la Tarjeta de Licencia del Automóvil'
   },
   "iw": {
+    "scanInfos": "Informations Reader",
     "text_enter_social": "או להיכנס למדיה חברתית",
     "text_sign_up": "הירשם",
     "text_track_location": "מעקב אחר מיקום הנהג",
@@ -5443,9 +5555,18 @@ Map<String, dynamic> languages = {
     "text_more_vehicles": "אתה יכול לבחור יותר מ- 1 סוגי רכב",
     "text_bidding": "הצעת מחיר",
     "text_contact_permission":
-        "איש הקשר שנבחר יתווסף בשרת שלנו למטרת SOS, באפליקציה יש אפשרות להסיר אנשי קשר אלה."
+        "איש הקשר שנבחר יתווסף בשרת שלנו למטרת SOS, באפליקציה יש אפשרות להסיר אנשי קשר אלה.",
+    'Pleasescanthefollowingpapers': 'בבקשה סרוק את המסמכים הבאים:',
+    'thiswillspeedupthesignupprocess': 'זה יאצה את תהליך ההרשמה',
+    'driverlicensefront': 'חזית רשיון הנהיגה',
+    'driverlicenseback': 'גב רשיון הנהיגה',
+    'driveridentitycardfront': 'חזית תעודת הזהות של הנהג',
+    'driveridentitycardback': 'גב תעודת הזהות של הנהג',
+    'carlicensecardfront': 'חזית כרטיס רשיון הרכב',
+    'carlicensecardback': 'גב כרטיס רשיון הרכב'
   },
   "bn": {
+    "scanInfos": "Informations Reader",
     "text_enter_social": "বা সোশ্যাল মিডিয়ায় প্রবেশ করুন",
     "text_sign_up": "নিবন্ধন করুন",
     "text_track_location": "ড্রাইভার অবস্থান ট্র্যাকিং",
@@ -5899,6 +6020,14 @@ Map<String, dynamic> languages = {
     "text_more_vehicles": "আপনি 1 টিরও বেশি যানবাহনের ধরণের চয়ন করতে পারেন",
     "text_bidding": "বিডিং",
     "text_contact_permission":
-        "নির্বাচিত যোগাযোগটি এসওএস উদ্দেশ্যে আমাদের সার্ভারে যুক্ত করা হবে, অ্যাপ্লিকেশনটিতে এই পরিচিতিগুলি অপসারণের একটি বিকল্প রয়েছে।"
+        "নির্বাচিত যোগাযোগটি এসওএস উদ্দেশ্যে আমাদের সার্ভারে যুক্ত করা হবে, অ্যাপ্লিকেশনটিতে এই পরিচিতিগুলি অপসারণের একটি বিকল্প রয়েছে।",
+    'Pleasescanthefollowingpapers': 'নিম্নলিখিত দলিলগুলি স্ক্যান করুন:',
+    'thiswillspeedupthesignupprocess': 'এটি নিবন্ধন প্রক্রিয়াটি দ্রুত করবে',
+    'driverlicensefront': 'ড্রাইভার লাইসেন্সের সামনের দিক',
+    'driverlicenseback': 'ড্রাইভার লাইসেন্সের পিছনের দিক',
+    'driveridentitycardfront': 'ড্রাইভার পরিচিতি কার্ডের সামনের দিক',
+    'driveridentitycardback': 'ড্রাইভার পরিচিতি কার্ডের পিছনের দিক',
+    'carlicensecardfront': 'গাড়ি লাইসেন্স কার্ডের সামনের দিক',
+    'carlicensecardback': 'গাড়ি লাইসেন্স কার্ডের পিছনের দিক'
   }
 };

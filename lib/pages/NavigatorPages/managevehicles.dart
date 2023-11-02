@@ -589,7 +589,7 @@ class _ManageVehiclesState extends State<ManageVehicles> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => const VehicleType()));
+                                    builder: (context) => VehicleType()));
                           },
                           text: languages[choosenLanguage]['text_add_vehicle']),
                     ),

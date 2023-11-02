@@ -17,7 +17,11 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'dart:async';
 
 class Otp extends StatefulWidget {
-  const Otp({Key? key}) : super(key: key);
+  List<Map<dynamic, dynamic>>? data;
+  Otp({
+    Key? key,
+    this.data,
+  }) : super(key: key);
 
   @override
   State<Otp> createState() => _OtpState();
@@ -42,6 +46,7 @@ class _OtpState extends State<Otp> {
   bool _loading = false; //loading screen showing
   @override
   void initState() {
+    print('loading Page');
     _loading = false;
     timers();
     otpFalse();
@@ -65,7 +70,7 @@ class _OtpState extends State<Otp> {
         Navigator.pushAndRemoveUntil(
             context,
             MaterialPageRoute(
-              builder: (context) => const DocsProcess(),
+              builder: (context) => DocsProcess(),
             ),
             (route) => false);
       } else if (userDetails['uploaded_document'] == true &&
@@ -84,8 +89,12 @@ class _OtpState extends State<Otp> {
       }
     } else if (verify == false) {
       if (ischeckownerordriver == 'driver') {
-        Navigator.pushReplacement(context,
-            MaterialPageRoute(builder: (context) => const GetStarted()));
+        Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+                builder: (context) => GetStarted(
+                      data: widget.data,
+                    )));
       } else if (ischeckownerordriver == 'owner') {
         Navigator.pushReplacement(context,
             MaterialPageRoute(builder: (context) => const OwnersRegister()));
